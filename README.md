@@ -25,6 +25,19 @@ OverbiteNX currently functions and runs, but has known bugs. If you want to help
 
 If you notice any untoward behaviour, the current beta test generates copious debugging output to the Browser Console. Please include a transcript of this output in any issue you file.
 
+## How to build from source - Linux
+
+```
+make -f Makefile.generic
+cp onyx $WHERETO/onyx
+# set path to $WHERETO/onyx
+$EDITOR EXAMPLE_onyx.json
+# if firefox
+cp EXAMPLE_onyx.json ~/.firefox/native-messaging-hosts/onyx.json
+# if librewolf
+cp EXAMPLE_onyx.json ~/.librewolf/native-messaging-hosts/onyx.json
+```
+
 ## How to build from source
 
 1. Onyx is written in portable C that should compile on nearly any POSIX-compliant system. There are some Win32-specific sections due to irregularities with Winsock. `gcc` and `clang` are both supported compilers.
